@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Paulig
+    given-names: Robert
+title: "Coherent-CDW-Simulator"
+version: 1.0.0
+date-released: 2025-11-23
+abstract: "Reference implementation of the Non-Filamentary Resonant Switching protocol for analog neuromorphic computing"
