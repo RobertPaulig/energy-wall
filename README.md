@@ -26,7 +26,10 @@ To reproduce the results and generate the comparison plot:
 python sim/main.py
 ```
 
-## Citation / Priority Statement
-This code serves as the reference implementation of the **"Coherent Analog Computing"** theoretical model developed by **Robert Paulig**.
+## Citation & License
 
-All rights to the underlying "Non-Filamentary Resonant Switching" protocol and associated architectural designs are reserved. This repository establishes priority of invention for the application of CDW dynamics in noise-free analog neural network training.
+This repository implements the **"Resonant Drive Protocol"** — a novel control method for CDW devices proposed by Robert Paulig.
+
+Unlike standard thermal/voltage switching (e.g., *Nature Sci Rep 7, 10851*), this approach utilizes frequency-matched pulses to induce coherent phase transitions, minimizing stochastic noise.
+
+All rights to the specific **resonant control algorithm** and **architecture** are reserved.
