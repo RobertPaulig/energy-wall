@@ -6,4 +6,4 @@ authors:
 title: "energy-wall"
 version: 1.0.0
 date-released: 2025-11-23
-abstract: "Reference implementation of the Non-Filamentary Resonant Switching protocol for analog neuromorphic computing"
+abstract: "Proof-of-concept simulation of the Non-Filamentary Resonant Switching method for analog neuromorphic computing"
