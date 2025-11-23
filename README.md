@@ -1,15 +1,18 @@
+
 # Energy Wall: Coherent Analog Computing Simulation
 
 ## Abstract
-Filamentary memristors (RRAM) have long been considered the future of analog computing, but they face a fundamental "Energy Wall" due to Random Telegraph Noise (RTN) and high write currents. This project demonstrates a breakthrough alternative: **Coherent Analog Computing** using Charge Density Waves (CDW). By leveraging phase-change via resonance instead of stochastic filament formation, we achieve orders of magnitude better efficiency and stability.
+Filamentary memristors (RRAM) struggle with an "Energy Wall" due to Random Telegraph Noise (RTN) and high write currents. This repository presents a **simulation study** of an alternative approach: **Coherent Analog Computing** using Charge Density Waves (CDW).
 
-## Key Findings: The Energy Wall
+The model explores how leveraging phase-change via resonance (instead of stochastic filament formation) could theoretically achieve orders of magnitude better efficiency and stability.
 
-Our simulation demonstrates that coherent switching bypasses the stochastic limitations of filamentary RRAM.
+## Key Findings (Simulation Only)
+
+Our simulation suggests that coherent switching can bypass the stochastic limitations of filamentary RRAM.
 
 ![Efficiency Graph](figures/comparison_chart.png)
 
-**Impact:**
+**Simulation Indications:**
 *   **~100x** reduction in energy consumption.
 *   **Stable >8-bit** precision suitable for LLM inference.
 
@@ -23,13 +26,23 @@ Our simulation demonstrates that coherent switching bypasses the stochastic limi
 To reproduce the results and generate the comparison plot:
 
 ```bash
+pip install -r requirements.txt
 python sim/main.py
 ```
+## Citation & Methodology
 
-## Citation & License
+This repository implements the "Resonant Drive Protocol" — a novel control method for CDW devices proposed by Robert Paulig.
 
-This repository implements the **"Resonant Drive Protocol"** — a novel control method for CDW devices proposed by Robert Paulig.
+Unlike standard thermal/voltage switching (e.g., Nature Sci Rep 7, 10851), this approach utilizes frequency-matched pulses to induce coherent phase transitions, minimizing stochastic noise.
 
-Unlike standard thermal/voltage switching (e.g., *Nature Sci Rep 7, 10851*), this approach utilizes frequency-matched pulses to induce coherent phase transitions, minimizing stochastic noise.
+The code is released under the MIT License to encourage research. However, if you use this resonant control concept in your work, please cite this repository:
 
-All rights to the specific **resonant control algorithm** and **architecture** are reserved.
+```bibtex
+@software{energy_wall_sim,
+  author = {Paulig, Robert},
+  title = {Energy Wall: Coherent Analog Computing Simulation},
+  year = {2025},
+  url = {https://github.com/RobertPaulig/energy-wall}
+}
+```
+
