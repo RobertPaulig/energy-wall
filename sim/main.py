@@ -1,3 +1,14 @@
+"""
+Project: Energy Wall
+---------------------------------------------------
+This script benchmarks the training dynamics of a standard Filamentary RRAM
+versus a proposed Coherent Phase-Change Unit (CDW) on the MNIST dataset.
+
+Physics Model: Phenomenological noise injection based on 1T-TaS2 spectral data.
+Author: Robert Paulig
+License: MIT
+"""
+
 import argparse, os, random, numpy as np, torch, torch.nn as nn, torch.optim as optim
 import sys
 import pandas as pd
@@ -100,7 +111,7 @@ def main():
     print(f'Saved results to {csv}')
 
     # Plotting
-    fig_path = os.path.join('figures', f'energy_wall_comparison_{ts}.png')
+    fig_path = os.path.join('figures', 'comparison_chart.png')
     plt.figure(figsize=(10, 6))
 
     # RRAM Plot
@@ -109,19 +120,12 @@ def main():
 
     # CDW Plot
     cdw_df = df[df['physics'] == 'CDW_COHERENT']
-    plt.plot(cdw_df.energy_mJ, cdw_df.acc, color='green', linewidth=3, label='Coherent CDW (Antigravity)')
+    plt.plot(cdw_df.energy_mJ, cdw_df.acc, color='green', linewidth=3, label='Coherent CDW (Energy Wall)')
 
     # Annotation
     if not cdw_df.empty and not rram_df.empty:
         last_cdw = cdw_df.iloc[-1]
         last_rram = rram_df.iloc[-1]
-
-        # Draw arrow from RRAM end towards CDW end or just label the gap
-        # The prompt asks for an arrow/text indicating the gap.
-        # Since CDW is low energy (left) and RRAM is high energy (right), the gap is horizontal.
-
-        mid_y = (last_cdw.acc + last_rram.acc) / 2
-        mid_x = (last_cdw.energy_mJ + last_rram.energy_mJ) / 2
 
         plt.annotate(
             "~100x Efficiency Advantage",

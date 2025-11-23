@@ -1,14 +1,17 @@
-# Project Coherence (Codename: Antigravity)
+# Energy Wall: Coherent Analog Computing Simulation
 
 ## Abstract
 Filamentary memristors (RRAM) have long been considered the future of analog computing, but they face a fundamental "Energy Wall" due to Random Telegraph Noise (RTN) and high write currents. This project demonstrates a breakthrough alternative: **Coherent Analog Computing** using Charge Density Waves (CDW). By leveraging phase-change via resonance instead of stochastic filament formation, we achieve orders of magnitude better efficiency and stability.
 
-## Key Findings (The Killer Feature)
-![Energy vs Accuracy Comparison](figures/energy_wall_comparison.png)
+## Key Findings: The Energy Wall
 
-*   **Energy Efficiency**: < 2 fJ/op (vs 150+ fJ/op for RRAM).
-*   **Precision**: >8-bit ENOB stable (No Telegraph Noise).
-*   **Mechanism**: Bulk Coherent Switching vs Stochastic Filament.
+Our simulation demonstrates that coherent switching bypasses the stochastic limitations of filamentary RRAM.
+
+![Efficiency Graph](figures/comparison_chart.png)
+
+**Impact:**
+*   **~100x** reduction in energy consumption.
+*   **Stable >8-bit** precision suitable for LLM inference.
 
 ## Repository Structure
 *   `sim/`: Core simulation logic (physics models, layers, main script).
